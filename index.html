@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flujo macro del proyecto CAPPES - URS</title>
+<style>
+  body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#1f2937;
+  }
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:24px;
+  }
+  h1{
+    text-align:center;
+    color:#17365D;
+    font-size:28px;
+    margin:0 0 6px;
+  }
+  .sub{
+    text-align:center;
+    color:#667085;
+    margin-bottom:20px;
+  }
+  .card{
+    background:#fff;
+    border:1px solid #d0d5dd;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(16,24,40,.08);
+    overflow:auto;
+  }
+  svg{
+    display:block;
+    width:1100px;
+    height:2250px;
+    margin:auto;
+    background:white;
+  }
+  .activity{ fill:#EAF2F8; stroke:#1F4E78; stroke-width:2; }
+  .terminator{ fill:#D9EAF7; stroke:#1F4E78; stroke-width:2.5; }
+  .decision{ fill:#FFF2CC; stroke:#BF9000; stroke-width:2; }
+  .document{ fill:#F7F9FB; stroke:#667085; stroke-width:1.8; }
+  .note{ fill:#FDECEC; stroke:#C62828; stroke-width:1.8; }
+  .small{ fill:#F3F8FC; stroke:#5B7FA3; stroke-width:1.5; }
+  .legend{ fill:#FAFAFA; stroke:#D0D5DD; stroke-width:1.5; }
+  .label{ font-size:16px; fill:#1f2937; text-anchor:middle; dominant-baseline:middle; }
+  .smalllabel{ font-size:14px; fill:#344054; text-anchor:middle; dominant-baseline:middle; }
+  .leftlabel{ font-size:14px; fill:#344054; }
+  .bold{ font-weight:700; }
+  .arrow{ stroke:#4A5568; stroke-width:2; fill:none; marker-end:url(#arrow); }
+  .dash{ stroke:#98A2B3; stroke-width:1.5; fill:none; stroke-dasharray:6 6; }
+  .yn{ font-size:14px; font-weight:700; fill:#475467; }
+  .riskTitle{ font-size:15px; font-weight:700; fill:#9B1C1C; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Flujo macro del proyecto – CAPPES / URS</h1>
+  <div class="sub">Consultoría para 4 informes de pertinencia de programas académicos</div>
+  <div class="card">
+  <svg viewBox="0 0 1100 2250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flujograma del proyecto CAPPES URS">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M0,0 L12,6 L0,12 z" fill="#4A5568"/>
+      </marker>
+    </defs>
+
+    <!-- INICIO -->
+    <rect x="440" y="40" width="220" height="52" rx="26" class="terminator"/>
+    <text x="550" y="67" class="label bold">INICIO</text>
+
+    <!-- contrato -->
+    <path class="arrow" d="M550 92 L550 135"/>
+    <rect x="395" y="135" width="310" height="80" class="activity"/>
+    <text x="550" y="163" class="label bold">FIRMA DEL CONTRATO</text>
+    <text x="550" y="190" class="smalllabel">Actores: CAPPES + URS</text>
+    <path class="document" d="M760 142 H970 V200 Q918 186 865 200 Q812 214 760 200 Z"/>
+    <text x="865" y="170" class="smalllabel bold">Documento</text>
+    <text x="865" y="192" class="smalllabel">Contrato URS firmado</text>
+    <path class="dash" d="M705 175 L760 175"/>
+
+    <!-- reunión -->
+    <path class="arrow" d="M550 215 L550 265"/>
+    <rect x="395" y="265" width="310" height="82" class="activity"/>
+    <text x="550" y="294" class="label bold">REUNIÓN DE INICIO</text>
+    <text x="550" y="321" class="smalllabel">Actores: CAPPES + URS</text>
+    <path class="document" d="M760 270 H985 V330 Q929 315 872 330 Q816 345 760 330 Z"/>
+    <text x="872" y="298" class="smalllabel bold">Documentos</text>
+    <text x="872" y="320" class="smalllabel">Acta + cronograma</text>
+    <path class="dash" d="M705 305 L760 305"/>
+
+    <!-- riesgo -->
+    <path class="note" d="M65 250 H330 V350 H80 V265 Z M65 250 L80 265 H65 Z"/>
+    <text x="86" y="278" class="riskTitle">PUNTO DE CONTROL</text>
+    <text x="86" y="306" class="leftlabel">Contrato: entrega máxima 30/11</text>
+    <text x="86" y="329" class="leftlabel">Cronograma aprobado: 12/12</text>
+    <text x="86" y="352" class="leftlabel">Revisar y regularizar discrepancia</text>
+    <path class="dash" d="M395 307 L330 307"/>
+
+    <!-- plan -->
+    <path class="arrow" d="M550 347 L550 405"/>
+    <rect x="395" y="405" width="310" height="95" class="activity"/>
+    <text x="550" y="432" class="label bold">ELABORACIÓN DEL PLAN DE TRABAJO</text>
+    <text x="550" y="458" class="smalllabel">Responsable: CAPPES</text>
+    <text x="550" y="481" class="smalllabel">Hito: Semana 2</text>
+    <path class="document" d="M760 416 H955 V476 Q906 462 858 476 Q809 490 760 476 Z"/>
+    <text x="858" y="444" class="smalllabel bold">Documento</text>
+    <text x="858" y="466" class="smalllabel">Plan de trabajo</text>
+    <path class="dash" d="M705 450 L760 450"/>
+
+    <!-- decisión validación -->
+    <path class="arrow" d="M550 500 L550 548"/>
+    <polygon points="550,548 680,620 550,692 420,620" class="decision"/>
+    <text x="550" y="604" class="smalllabel bold">¿PLAN VALIDADO POR EL</text>
+    <text x="550" y="628" class="smalllabel bold">VICERRECTORADO ACADÉMICO?</text>
+
+    <!-- NO -->
+    <path class="arrow" d="M420 620 L315 620"/>
+    <text x="365" y="604" class="yn">NO</text>
+    <rect x="85" y="580" width="230" height="82" class="small"/>
+    <text x="200" y="608" class="smalllabel bold">Levantar observaciones</text>
+    <text x="200" y="635" class="smalllabel">y ajustar el plan</text>
+    <path class="arrow" d="M200 580 L200 520 L395 520 L395 452"/>
+
+    <!-- SI / preparación -->
+    <path class="arrow" d="M550 692 L550 752"/>
+    <text x="570" y="724" class="yn">SÍ</text>
+    <rect x="395" y="752" width="310" height="112" class="activity"/>
+    <text x="550" y="780" class="label bold">PREPARACIÓN DEL TRABAJO DE CAMPO</text>
+    <text x="550" y="808" class="smalllabel">• fechas y sedes</text>
+    <text x="550" y="831" class="smalllabel">• instrumentos</text>
+    <text x="550" y="854" class="smalllabel">• logística de viaje</text>
+    <path class="document" d="M760 766 H985 V836 Q929 820 872 836 Q816 852 760 836 Z"/>
+    <text x="872" y="795" class="smalllabel bold">Documentos</text>
+    <text x="872" y="818" class="smalllabel">Programación + instrumentos</text>
+    <path class="dash" d="M705 808 L760 808"/>
+
+    <!-- convocatoria -->
+    <path class="arrow" d="M550 864 L550 915"/>
+    <rect x="395" y="915" width="310" height="82" class="activity"/>
+    <text x="550" y="944" class="label bold">CONVOCATORIA DE PARTICIPANTES</text>
+    <text x="550" y="972" class="smalllabel">Responsable: URS</text>
+
+    <!-- campo -->
+    <path class="arrow" d="M550 997 L550 1045"/>
+    <rect x="395" y="1045" width="310" height="118" class="activity"/>
+    <text x="550" y="1072" class="label bold">TRABAJO DE CAMPO</text>
+    <text x="550" y="1098" class="smalllabel">Semanas 4 a 7 · 2 sedes</text>
+    <text x="550" y="1122" class="smalllabel">8 focus groups + encuesta</text>
+    <text x="550" y="1146" class="smalllabel">Responsable: CAPPES</text>
+    <path class="document" d="M760 1060 H985 V1136 Q929 1119 872 1136 Q816 1153 760 1136 Z"/>
+    <text x="872" y="1087" class="smalllabel bold">Evidencias</text>
+    <text x="872" y="1110" class="smalllabel">registros, encuestas, audios</text>
+    <text x="872" y="1131" class="smalllabel">y notas de campo</text>
+    <path class="dash" d="M705 1104 L760 1104"/>
+
+    <!-- procesamiento -->
+    <path class="arrow" d="M550 1163 L550 1215"/>
+    <rect x="395" y="1215" width="310" height="120" class="activity"/>
+    <text x="550" y="1242" class="label bold">PROCESAMIENTO Y SISTEMATIZACIÓN</text>
+    <text x="550" y="1268" class="smalllabel">Responsable: Equipo de Estudios</text>
+    <text x="550" y="1291" class="smalllabel">Base de encuesta · transcripciones</text>
+    <text x="550" y="1314" class="smalllabel">Matrices de análisis</text>
+
+    <!-- informes -->
+    <path class="arrow" d="M550 1335 L550 1387"/>
+    <rect x="395" y="1387" width="310" height="84" class="activity"/>
+    <text x="550" y="1416" class="label bold">ELABORACIÓN DE LOS 4 INFORMES</text>
+    <text x="550" y="1444" class="smalllabel">Responsable: Equipo de Estudios</text>
+
+    <!-- diagramación -->
+    <path class="arrow" d="M550 1471 L550 1523"/>
+    <rect x="395" y="1523" width="310" height="92" class="activity"/>
+    <text x="550" y="1550" class="label bold">DIAGRAMACIÓN DE LOS INFORMES</text>
+    <text x="550" y="1576" class="smalllabel">Responsable: Comunicaciones</text>
+    <text x="550" y="1598" class="smalllabel">Hito: Semana 10</text>
+
+    <!-- entrega -->
+    <path class="arrow" d="M550 1615 L550 1664"/>
+    <rect x="395" y="1664" width="310" height="75" class="activity"/>
+    <text x="550" y="1702" class="label bold">ENTREGA FORMAL A LA URS</text>
+    <path class="document" d="M760 1668 H955 V1728 Q906 1714 858 1728 Q809 1742 760 1728 Z"/>
+    <text x="858" y="1695" class="smalllabel bold">Documento</text>
+    <text x="858" y="1717" class="smalllabel">4 informes finales</text>
+    <path class="dash" d="M705 1701 L760 1701"/>
+
+    <!-- conformidad -->
+    <path class="arrow" d="M550 1739 L550 1788"/>
+    <polygon points="550,1788 665,1853 550,1918 435,1853" class="decision"/>
+    <text x="550" y="1840" class="smalllabel bold">¿URS OTORGA</text>
+    <text x="550" y="1866" class="smalllabel bold">CONFORMIDAD?</text>
+
+    <!-- NO -->
+    <path class="arrow" d="M435 1853 L320 1853"/>
+    <text x="370" y="1837" class="yn">NO</text>
+    <rect x="85" y="1812" width="235" height="84" class="small"/>
+    <text x="202" y="1840" class="smalllabel bold">Atender observaciones,</text>
+    <text x="202" y="1868" class="smalllabel">ajustar y reenviar</text>
+    <path class="arrow" d="M202 1812 L202 1748 L395 1748 L395 1702"/>
+
+    <!-- SI / facturación -->
+    <path class="arrow" d="M550 1918 L550 1970"/>
+    <text x="570" y="1948" class="yn">SÍ</text>
+    <rect x="395" y="1970" width="310" height="92" class="activity"/>
+    <text x="550" y="1998" class="label bold">FACTURACIÓN Y PAGO</text>
+    <text x="550" y="2024" class="smalllabel">Factura: CAPPES</text>
+    <text x="550" y="2047" class="smalllabel">Pago: Oficina de Logística URS</text>
+    <path class="document" d="M760 1980 H955 V2040 Q906 2026 858 2040 Q809 2054 760 2040 Z"/>
+    <text x="858" y="2007" class="smalllabel bold">Documentos</text>
+    <text x="858" y="2029" class="smalllabel">Factura + conformidad</text>
+    <path class="dash" d="M705 2015 L760 2015"/>
+
+    <!-- cierre -->
+    <path class="arrow" d="M550 2062 L550 2108"/>
+    <rect x="395" y="2108" width="310" height="100" class="activity"/>
+    <text x="550" y="2134" class="label bold">CIERRE DEL PROYECTO</text>
+    <text x="550" y="2160" class="smalllabel">Entregables y conformidades</text>
+    <text x="550" y="2183" class="smalllabel">Pagos verificados · archivo final</text>
+
+    <!-- FIN -->
+    <path class="arrow" d="M550 2208 L550 2230"/>
+    <rect x="440" y="2230" width="220" height="52" rx="26" class="terminator"/>
+    <text x="550" y="2256" class="label bold">FIN</text>
+
+    <!-- leyenda -->
+    <rect x="40" y="2040" width="290" height="155" rx="12" class="legend"/>
+    <text x="60" y="2068" class="leftlabel bold">LEYENDA</text>
+    <text x="60" y="2094" class="leftlabel">Óvalo: inicio / fin</text>
+    <text x="60" y="2118" class="leftlabel">Rectángulo: actividad</text>
+    <text x="60" y="2142" class="leftlabel">Rombo: decisión / aprobación</text>
+    <text x="60" y="2166" class="leftlabel">Documento: archivo generado/usado</text>
+    <text x="60" y="2190" class="leftlabel">Flecha: secuencia del proceso</text>
+  </svg>
+  </div>
+</div>
+</body>
+</html>
